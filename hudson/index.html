@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "The alien government network has been hacked by humans " + localStorage.clickcount + " time(s).";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+		<title>All about aliens</title>
+	</head>
+	<body>
+		<img src="assets/alien.jpg" alt="alien" height="250px" width="350px">
+		<img src="assets/incendis species height chart.jpg" height = "400px" width="500px">
+		<img src="assets/twohead.jpg" alt="twohead" height="250px" width="350px">
+		<h1>The Types of Aliens</h1>
+		</ol>
+			<li>Split face</li>
+			<li>Brainiac</li>
+			<li>Mork</li>
+			<li>Vitalican</li>
+			<li>Gurian</li>
+			<li>Harran</li>
+		</ol>
+		<button>Split face</button>
+		<button>Brainiac</button>
+		<button>Mork</button>
+		<button>Vitalican</button>
+		<button>Gurian</button>
+		<button>Harran</button>
+		<button>Press to hack the alien goverment supercomputer</button>
+		<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+	</body>
+</html>
